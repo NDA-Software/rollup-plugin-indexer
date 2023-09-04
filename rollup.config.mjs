@@ -9,14 +9,13 @@ export default [{
     input: 'src/index.ts',
     output: [{
         exports: 'named',
-        preserveModules: true,
         interop: 'auto',
         dir: '.build/',
         format: 'esm'
     }],
     plugins: [
         typescript({
-            tsconfig: 'tsconfig.json',
+            tsconfig: './tsconfig.json',
             declarationDir: '.build/types/',
             include: [
                 './src/**/*.ts'

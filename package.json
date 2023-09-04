@@ -1,0 +1,119 @@
+{
+    "name": "rollup-plugin-indexer",
+    "version": "1.0.0",
+    "description": "Package to automate indexing before bundling of files in rollup.",
+    "repository": "git@github.com:NDA-Software/rollup-plugin-indexer.git",
+    "author": "Herr Turing <admin@nda.software>",
+    "license": "MIT",
+    "keywords": [
+        "index",
+        "typescript",
+        "rollup-plugin"
+    ],
+    "scripts": {
+        "build": "rollup -c",
+        "watch": "rollup -c -w",
+        "lint": "eslint src --ext .ts,.tsx src",
+        "lint-fix": "eslint src --ext .ts,.tsx src --fix",
+        "test": "jest"
+    },
+    "files": [
+        ".build"
+    ],
+    "exports": {
+        ".": "./.build/index.js"
+    },
+    "typesVersions": {
+        "*": {
+            "*": [
+                "./.build/index.d.ts"
+            ]
+        }
+    },
+    "devDependencies": {
+        "@rollup/plugin-commonjs": "^25.0.2",
+        "@rollup/plugin-node-resolve": "^15.1.0",
+        "@rollup/plugin-typescript": "^11.1.2",
+        "@types/jest": "^29.5.4",
+        "@types/node": "^20.5.2",
+        "@typescript-eslint/eslint-plugin": "^6.4.1",
+        "eslint": "^8.47.0",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-config-standard-with-typescript": "^38.0.0",
+        "eslint-plugin-import": "^2.28.1",
+        "eslint-plugin-n": "^15.7.0",
+        "eslint-plugin-prettier": "^5.0.0",
+        "eslint-plugin-promise": "^6.1.1",
+        "jest": "^29.6.3",
+        "rollup": "^3.26.2",
+        "rollup-plugin-delete": "^2.0.0",
+        "rollup-plugin-dts": "^5.3.0",
+        "rollup-plugin-peer-deps-external": "^2.2.4",
+        "ts-jest": "^29.1.1",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.1.6"
+    },
+    "eslintConfig": {
+        "extends": [
+            "standard-with-typescript"
+        ],
+        "overrides": [
+            {
+                "files": [
+                    "*.js",
+                    "*.jsx",
+                    "*.ts",
+                    "*.tsx",
+                    "*.d.ts",
+                    "*.mjs"
+                ]
+            }
+        ],
+        "parserOptions": {
+            "project": "./tsconfig.json"
+        },
+        "rules": {
+            "@typescript-eslint/semi": "off",
+            "semi": [
+                "error",
+                "always"
+            ],
+            "@typescript-eslint/indent": [
+                "error",
+                4
+            ],
+            "@typescript-eslint/space-before-function-paren": "off",
+            "@typescript-eslint/no-var-requires": "off",
+            "curly": "off",
+            "@typescript-eslint/member-delimiter-style": "off",
+            "prefer-template": "error",
+            "nonblock-statement-body-position": [
+                "error",
+                "below"
+            ]
+        }
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "semi": false,
+        "singleQuote": true,
+        "trailingComma": "none",
+        "endOfLine": "auto"
+    },
+    "jest": {
+        "preset": "ts-jest",
+        "testEnvironment": "node",
+        "transform": {
+            "^.+\\.(j|t)sx?$": "ts-jest"
+        },
+        "testPathIgnorePatterns": [
+            "/node_modules/",
+            "/src/",
+            "/.build/"
+        ]
+    },
+    "funding": "https://www.buymeacoffee.com/herrturing",
+    "dependencies": {
+        "ts-cornucopia": "^1.1.0"
+    }
+}

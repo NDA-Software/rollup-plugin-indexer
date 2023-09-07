@@ -7,6 +7,7 @@ interface indexerOptions {
     overwriteBaseText?: string | null;
     indexExtension?: 'ts' | 'js';
     nameCasing?: 'camelCase' | 'PascalCase';
+    recursive?: boolean
 }
 
 export default function (path: string | [string], options: indexerOptions = {}): Plugin {

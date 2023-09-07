@@ -27,14 +27,12 @@ const innerResult = '/* AUTO-GENERATED, DO NOT EDIT MANUALLY */' +
 test('Testing indexer.', async () => {
     const path = './.temp/indexer/';
 
-    mkdirSync(path, { recursive: true });
+    mkdirSync(`${path}subFolder`, { recursive: true });
 
     writeFileSync(`${path}item1.ts`, '');
     writeFileSync(`${path}item2.ts`, '');
 
-    mkdirSync(`${path}subFolder`, { recursive: true });
-
-    const plugin = indexer(path);
+    const plugin = indexer(path, { recursive: true });
 
     const buildStart = plugin.buildStart as { handler: () => Promise<void> };
 

@@ -4,7 +4,7 @@
 
 This package was made as a way to convert the function "indexer" from the package "ts-cornucopia" as part of the rollup's execution instead of being run manually.
 
-After this plugin is executed, any folder selected for its execution should have an index file which imports and exports all other files inside same folder (including other folders), this is always recursive.
+After this plugin is executed, any folder selected for its execution should have an index file which imports and exports all other files inside same folder (including other folders).
 
 ## Table of Contents
 
@@ -39,7 +39,7 @@ export default [{
         format: 'esm'
     }],
     plugins: [
-        indexer("./src"),
+        indexer("./src", { recursive: true }),
         typescript({
             tsconfig: 'tsconfig.json',
             outDir: '.build/',

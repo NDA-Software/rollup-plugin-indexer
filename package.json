@@ -1,6 +1,6 @@
 {
     "name": "rollup-plugin-indexer",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "description": "Package to automate indexing before bundling of files in rollup.",
     "repository": "git@github.com:NDA-Software/rollup-plugin-indexer.git",
     "author": "Herr Turing <admin@nda.software>",
@@ -50,6 +50,7 @@
         "rollup-plugin-delete": "^2.0.0",
         "rollup-plugin-dts": "^5.3.0",
         "rollup-plugin-peer-deps-external": "^2.2.4",
+        "ts-cornucopia": "^2.1.0",
         "ts-jest": "^29.1.1",
         "ts-node": "^10.9.1",
         "typescript": "^5.1.6"
@@ -116,8 +117,5 @@
             "/.build/"
         ]
     },
-    "funding": "https://www.buymeacoffee.com/herrturing",
-    "dependencies": {
-        "ts-cornucopia": "^2.0.0"
-    }
+    "funding": "https://www.buymeacoffee.com/herrturing"
 }

@@ -7,9 +7,9 @@ const outerResult = '/* AUTO-GENERATED, DO NOT EDIT MANUALLY */\n' +
 "import item2 from './item2';\n" +
 "import subFolder from './subFolder';\n" +
 '\n' +
-"export { default as item1 } from './item1';\n" +
-"export { default as item2 } from './item2';\n" +
-"export { default as subFolder } from './subFolder';\n" +
+'export { item1 };\n' +
+'export { item2 };\n' +
+'export { subFolder };\n' +
 '\n' +
 'export default {\n' +
 '    item1,\n' +
@@ -32,7 +32,7 @@ test('Testing indexer.', async () => {
     writeFileSync(`${path}item1.ts`, '');
     writeFileSync(`${path}item2.ts`, '');
 
-    const plugin = indexer(path, { recursive: true });
+    const plugin = indexer(path, { recursive: true, exportMode: 'default' });
 
     const buildStart = plugin.buildStart as { handler: () => Promise<void> };
 

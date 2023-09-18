@@ -21,7 +21,7 @@ npm install --save-dev rollup-plugin-indexer
 
 ## Usage
 
-The possible parameters that this plugin accept are the same of the indexer from the package ts-cornucopia, therefore, the details can be found in this [documentation](https://github.com/NDA-Software/ts-cornucopia/blob/master/docs/scripts/indexer.md).
+The possible parameters that this plugin accepts are the same of the indexer from the package ts-cornucopia, therefore, the details can be found in this [documentation](https://github.com/NDA-Software/ts-cornucopia/blob/master/docs/scripts/indexer.md).
 
 Bellow is a quick example of usage of the indexer with typescript. Most of times you will probably want to run this plugin before all others as other files may expect the imports and exports to be already correct by buildStart.
 

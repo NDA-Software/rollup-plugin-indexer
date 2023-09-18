@@ -1,15 +1,6 @@
-import { indexer } from 'ts-cornucopia/scripts';
+import { indexer, type indexerOptions } from 'ts-cornucopia/scripts';
 
 import { type Plugin } from 'rollup';
-
-interface indexerOptions {
-    ignoredFiles?: string[] | null;
-    overwriteBaseText?: string | null;
-    indexExtension?: 'ts' | 'js';
-    nameCasing?: 'camelCase' | 'PascalCase';
-    recursive?: boolean,
-    exportMode?: 'named' | 'default' | 'mixed'
-}
 
 export default function (path: string | [string], options: indexerOptions = {}): Plugin {
     return {

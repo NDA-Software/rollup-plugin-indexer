@@ -1,6 +1,6 @@
 import { mkdirSync, readFileSync, writeFileSync, rmSync } from 'fs';
 
-import indexer from '../.build';
+import indexer from '../src';
 
 const outerResult = '/* AUTO-GENERATED, DO NOT EDIT MANUALLY */\n' +
 "import item1 from './item1';\n" +

@@ -3,7 +3,7 @@
     "main": "./dist/cjs/index.cjs",
     "module": "./dist/esm/index.mjs",
     "type": "module",
-    "version": "3.0.0",
+    "version": "3.1.0",
     "description": "Package to automate indexing before bundling of files in rollup.",
     "repository": "git@github.com:NDA-Software/rollup-plugin-indexer.git",
     "author": "HerrTuring <admin@nda.software>",
@@ -37,7 +37,7 @@
         }
     },
     "dependencies": {
-        "ts-cornucopia": "^3.0.1"
+        "ts-cornucopia": "^3.1.0"
     },
     "devDependencies": {
         "@rollup/plugin-json": "^6.0.1",

@@ -74,8 +74,7 @@ const sharedConfigs = {
     input: 'src/index.ts',
     plugins: [
         nodeResolve(),
-        json(),
-        commonjs()
+        json()
     ],
     external
 };
